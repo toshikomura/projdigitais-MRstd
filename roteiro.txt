@@ -1,0 +1,21 @@
+CI210 - Projetos de Sistemas Digitais e Microprocessadores
+
+Roteiro para uso do ghdl
+
+Copie o arquivo MRstd.tgz da página da disciplina e o descomprima num
+diretório do projeto.  Você trabalhará com os arquivos MRstd.vhd,
+MRstd_tb.vhd e prog.txt.  Execute os comandos a seguir em sequencia, no
+diretório corrente.
+
+
+ghdl -a --ieee=synopsys -fexplicit MRstd.vhd 
+ghdl -a --ieee=synopsys -fexplicit MRstd_tb.vhd 
+ghdl -e --ieee=synopsys -fexplicit MRstd_tb
+./mrstd_tb --stop-time=1000ns --vcd=mrstd.vcd
+gtkwave mrstd.vcd
+
+
+
+--x--
+Profs. Roberto Hexsel, Eduardo Todt, Luis Allan Kunzle
+2011-1
